@@ -1,0 +1,16 @@
+for big eara use <div>
+for a few words use<span>
+what is mean svg
+ol (orderd list) li (list)
+<mark> sub move down sup move up
+===================================
+Q1:
+
+I'm trying to prove my HTML file with the PHP code written by Dr. Rossiter. I'm using POST method for handling the form, but the PHP code shows these:
+QUERY_STRING is
+REQUEST_URI is /~rossiter/cgi-bin/show_everything.php
+A1:
+If you use the POST method, you will see nothing.
+If you use the GET method when submitting the form, you will see everything you submitted by the form in the QUERY_STRING and the REQUEST_URI.
+====================================
+

@@ -1,0 +1,4 @@
+button onclick="alret('hi toti')">click me!</button>
+<script type="text/js">
+alert("page is loded")
+decumment.getelementbid('text').innerhtml="hello world"

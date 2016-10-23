@@ -1,0 +1,99 @@
+console =if you want youhave problem or no
+in one line comment use //
+and more than one use /*,,,,,,,*/
+decument.getElementById("text").innerHTML = "hello koki";
+          =============================
+<body>
+     <p id="text">hello toti</p>
+    <button id="myButton">change text</button>
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function() {  
+      document.getElementById("text").innerHTML = "hello koki";  
+      }
+    </script> 
+    </body>
+              ==========================
+   document.getElementById("secondButton").onclick = function() {    
+  document.getElementById("seconedparagraph").innerHTML = "i think" + document.getElementById("seconedparagraph").innerHTML+ "awsome";
+
+      } 
+          ===============================
+
+if want big size use <h1>words</h1>
+
+       ==============================
+      <p id="moretext">this is some text</p>
+     <button id="styletext">style text</button>
+    document.getElementById("styletext").onclick = function() {   
+    document.getElementById("moretext").style.color = "red";    
+         } "this code fr change color"          
+         =============================
+         document.getElementById("styletext").onclick = function() {    
+         document.getElementById("moretext").style.fontSize = "40px";
+           "this code fr change font-size"
+        =================================
+       document.getElementById("moretext").style.display = "none";
+           "this code fr dissapear"
+        =================================
+   tweets.splice(1, 1); passing 2 variables
+             ----------------
+   alert(Math.floor(Math.random() * 5)); this code for random number
+        ============================== 
+  how to use function to return value 
+  function average(a,b) {  
+           return ((a+b) / 2);  
+        }    
+      var  x = 5;
+      var y = 10;
+      alert(average(x , y));
+      ===============================
+         var top = Math.random() * 400;
+         var left = Math.random() * 400;   
+          document.getElementById("shape").style.top = top + "px";   
+          document.getElementById("shape").style.left = left + "px";
+    change pic or square to left and top (up nd down)
+       =================================
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+            =================================
+         =======================================
+      ==============================================
+  =====================================================\
+===========================================================
+
+
+
+
+       ((((((((((((((((((jquery)))))))))))))))))
+
+        
+            $(".square").click(function(){
+              alert("square was clicked"); to select  the sqare 
+            });
+  $("div") to select all inside div
+  if yu want know your page-size use:alert($("body").css("width"));
+  use this code if want dissapear something ($(this).css("display","none");)
+-----------------------------
+this code for change size and color: in jquery
+$("#circle").click(function(){
+               $(this).animate({width:"400px",
+            height:"400px",marginLeft:"100px",marginTop:"100px"}, 2000,function(){  
+                  $(this).css("background-color","red"); 
+               });   
+           }); 
+  -----------------------------
+$( "#draggable" ).draggable({ axis: "y" });
+  this code for (string) to move  up and down
+  -----------------------------
+    $("p").draggable({containment: "parent"});
+    <div style="width:400px;height:300px;background-color:yellow"></div>
+    this code fr (string move inside boxs only)
+  -----------------------------
+  $("accordion").accordion();for make paragraph like title. >
+                                                            >
+                                                            >
+     =========================================================
+     <div class="jumbotron">
+  <div class="container">
+     ======================================
+     

@@ -1,0 +1,154 @@
+
+<html>
+    <head>
+        
+        <title>AJAX</title>
+        
+        <script  type="text/javascript" src="ex/jquery.min.js"></script>
+        
+        <script type="application/javascript" src="ex/jquery-ui.js"></script>
+        
+        <link href="ex/jquery-ui.css"  rel="stylesheet">
+        
+        
+        <style type="text/css">
+        
+        
+            body {
+                
+                font-family: sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+        
+            #header {
+                
+                 width:100%;
+                 background-color: #eeeeee;
+                 padding: 5px;
+                 height:30px;
+            }
+            
+            #logo {
+                
+                float:left;
+                font-weight: bold;
+                font-size: 120%;
+                padding: 3px 5px;
+                
+            }
+            
+            #buttonContainer {
+                
+                     width:300px;
+                     margin:0 auto;
+                
+            }
+            
+            .toggleButton {
+                
+                float:left;
+                border: 1px solid grey;
+                padding:6px;
+                border-right: none;
+                font-size: 90%;
+                
+            }
+            
+            #html {
+                
+               border-top-left-radius:4px;
+               border-bottom-left-radius: 4px;
+                
+            }
+            
+            #output {
+                
+                border-top-right-radius:4px;
+                border-bottom-right-radius: 4px;
+                border-right: 1px solid grey;
+                
+            }
+            
+           .active {
+                
+               background-color: #e8f2ff;  
+                
+            }
+        
+        
+        </style>
+
+    </head>
+       <body>
+         
+           <div id="header">
+           
+           <div id="logo">
+               
+               codeplayer
+               
+               </div>
+           
+           <div id="buttonContainer">
+               
+              <div class="toggleButton active" id="html">html</div> 
+               
+               <div class="toggleButton" id="css">css</div> 
+               
+               <div class="toggleButton" id="javascript">javascript</div> 
+               
+               <div class="toggleButton active" id="output">output</div> 
+               
+               
+               </div>
+               
+           </div>
+           
+           <script type="text/javascript">
+            
+              
+              $(".toggleButton").hover(function() {
+                  
+                  $(this).css("background-color","grey");
+                  
+              }, function() {
+                  
+                  $(this).css("background-color","#eeeeee");
+                  
+              }); 
+               
+               
+               
+               
+               
+               
+               
+               
+              
+            </script>
+            
+            
+    </body>  
+
+</html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

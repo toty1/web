@@ -1,0 +1,182 @@
+$myArray = array("toti","koki","aytn");
+print_r($myArray);
+=============================
+when want cut some string from php code use this unset($myarray["toti"]);
+=============================iff
+$user ="rob";
+ if($user =="toti") {
+     echo "hello toti"; 
+ }else { 
+    echo "idon,t know u";
+}
+=============================loop
+for($i =2;  $i <= 30; $i = $i + 2) {
+    echo $i."<br>";
+  }
+=============================while
+$i =5;
+while ($i <=50) {
+    echo $i."<br>";
+    $i = $i + 5;
+}  
+=============================
+echo "hi there".$_GET[name]."!";
+?>
+<P>what is your name</P>
+<form>
+<input name="name" type="text">
+<input type="submit" value="GO">
+</form> username ||password
+=============================how tomake form for weather::
+ <form>
+    <fieldset class="form-group">
+        <label class="enter a name of city"></label>
+        <input type="text" class="form-control" name="city" id="city"  placeholder="london,tokyo,eg">
+  </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+=============================((SQL))--
+how to create form in database
+  $query = "INSERT into `users`  (`email` ,`password`)
+  VALUES('koki@gmail.com', 'asdcfg')";
+  mysqli_query($link ,$query);
+  ===========================
+$query = "select*form users where email like '%gmail.com'";
+when you want change email in sql.
+ ============================
+echo md5("password");
+ ============================
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+      
+      <style type="text/css">
+      
+      
+          .container{
+              
+              text-align: center;
+              width: 400px;
+              margin-bottom: 200px;
+          }
+          
+     html { 
+          background: url(backghhhround.jpeg) no-repeat center center fixed; 
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+          background-size: cover;
+
+          }
+          
+          body{
+              
+              background: none;
+          }
+          
+          #loginform {
+              
+              display: none;
+          }
+          
+          
+      </style>
+  </head>
+  <body>
+      
+            <div class="container">
+
+      
+              <h1>secret diary</h1>
+                
+                
+
+           <form method="post" id="signupform">
+          
+              <filedset class="form-group">
+                  
+              <input class="form-control" type="email" name="email" placeholder="youremail">
+              
+              </filedset>
+          
+              
+              <filedset class="form-group">
+              <input class="form-control" type="password" name="password" placeholder="password">
+             <input class="btn btn-sucsess"type="submit" name="submit"value="Sign up">
+              </filedset>
+               
+              <p><a id="showLoginForm">loggin</a></p>
+              
+              </form> 
+   
+              <form method="post" id="loginform">
+
+               <filedset class="form-group">
+                   
+              <input class="form-control" type="email" name="email" placeholder="youremail">
+              
+              </filedset>
+          
+              <filedset class="form-group">
+              <input class="form-control" type="password" name="password" placeholder="password">
+             <input class="btn btn-sucsess"type="submit" name="submit"value="login">
+                  
+             </filedset>
+              <p><a id="showloginform">loggin</a></p>
+
+                
+          </form>
+
+      </div>  
+          
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+      
+      <script type="text/javascript">
+      
+      $("#showloginform").click(Function() {
+                                
+       $("#signupform").toggle();
+       $("#loginform").toggle();
+                                
+     });
+      
+      
+      
+      
+      </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+   
+<?php
+
+
+ 
+
+  // $link = mysqli_connect("localhost" , "root" , "" , "toty");
+
+
+
+   //if(mysqli_connect_error()) {
+       
+     //  die("there was  an error connecting to the database");
+   
+   
+
+ 

@@ -1,0 +1,49 @@
+check  this in example domain ()
+chrest utf-8 meta tag what wesee up here
+content type tell the browser what you write in content tag
+viewport meta tag to defin the width and initial scales 1 for zoom out nd zoom in
+================
+the header 7 is dosn,t exist
+when use pragraph  line to make line under line
+<br>tag can meke same line but without line break
+for bold type (strong) for italic (em)for under line(u)or (ins)
+supscript(sup) for subscript(sub) fr deleted (del)
+<hr> for make ----------
+for list use (ul tag) for list item use(li)
+<ol> tag for make number OR {<ol type= "A">}
+<input> some boxes like username 
+<p><input type ="checkbox"></p>
+placeholder ="username" you can right in checkbox lightly
+<select>
+<option>icecream</option>wen want select someone eles
+write like that <option selected>icecram </option>
+write link: <p><a href="http://www.google.com">click here togo togoogle.com</a></p>
+uncle links linking with in bage
+to iclude the google homepage <iframe src="http://www.ecowebhosting.co.uk"></iframe>
+to include the vedio from you tube click share after that choose embed and coby that link.
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/mAS5jQ39wwU" frameborder="0" allowfullscreen></iframe>
+this style code(css) <p style="color:orange;font-size:100">the cat play with rat</p>
+<html>
+<head>
+    <title>myluv</title>
+    <style type="text/css">
+        p {
+           color:darkmagenta; 
+            font-size:200%;  
+        }
+        h1{
+            color:pink;
+            font-size: 100%;
+        }
+ ========================================
+ for id color use (#)
+ for  class color only use .red{color:red;}
+ z-index: 1 to make box infrontof the other box
+border: 10px yellow (solid or double) tomake 7aft el box with other color
+target-blank to open the link in new tab
+=========================================
+to do screen shot use (commond+shift+4)
+=========================================
+margin:space btween the page and header
+padding:space btween words write inside boxes
+-----------------------------------------

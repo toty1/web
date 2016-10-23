@@ -1,0 +1,622 @@
+<html>
+    <head>
+        
+        <title>javascript</title>
+        
+        <style type="text/css">
+    
+            .circle {
+              width:200px;
+              height:200px;
+              border-radius: 50%;
+              float:left;
+              margin-right: 50px;    
+            }   
+            
+             #red-circle {
+                
+                background-color: red;
+            }
+            
+              #blue-circle {
+                
+                background-color: blue;
+            }
+            
+              #yellow-circle {
+                
+                background-color: yellow;
+            }
+            
+            
+     </style>  
+        
+    </head>
+    
+<body>
+    <div class="circle" id="red-circle"></div> 
+    
+    <div class="circle" id="blue-circle"></div>
+    
+    <div class="circle" id="yellow-circle"></div>
+    
+    <script type="text/javascript">
+        
+         document.getElementById("red-circle").onclick = function(){
+            
+         document.getElementById("red-circle").style.display = "none";   
+            
+        }
+        
+          document.getElementById("blue-circle").onclick = function(){
+            
+         document.getElementById("blue-circle").style.display = "none";   
+            
+        }
+        
+      document.getElementById("yellow-circle").onclick = function(){
+            
+         document.getElementById("yellow-circle").style.display = "none";   
+            
+        }
+        
+    </script>
+   
+    </body>
+
+</html>
+
+
+===========================
+<html>  ((change text))
+    <head>
+        
+        <title>javascript</title>
+        
+        
+    </head>
+    
+    <body>
+          
+    <input type="text"  id="textinput">
+           
+   <button id="textchange">change the text</button>
+        
+        <p id="text">this is some text!</p>    
+   
+    <script type="text/javascript">
+        
+         document.getElementById("textchange").onclick = function() {
+             
+          var textentered = "";
+             
+         textentered = document.getElementById("textinput").value;
+
+             document.getElementById("text").innerHTML = textentered;
+         }
+         
+   
+    </script>
+   
+    </body>
+
+</html>
+==================================
+<html>     ((arrays))
+    <head>
+        
+        <title>javascript</title>
+        
+        
+    </head>
+    
+    <body>
+          
+
+    <script type="text/javascript">
+      
+   
+        var myarray = new Array();
+        
+        myarray[0] = "pizza";
+        
+        myarray[1] = "choclet";
+        
+        alert(myarray[0]);
+        
+        var tweets = ["morning" , "luv koki"];
+        
+        tweets.push("back to work");
+        
+        tweets.splice(1, 1);
+        
+        console.log(tweets);
+    </script>
+   
+    </body>
+
+</html>
+==========================================
+<html>  ((magicword))
+    <head>
+        
+        <title>javascript</title>
+        
+        
+    </head>
+    
+    <body>
+        
+        <p>what is the magic word</p>
+  
+        <p><input type="text" id="magicword"></p>
+        
+        <p><button id="checkmagicword">enter</button></p>
+        
+    <script type="text/javascript">
+      
+  
+        document.getElementById("checkmagicword").onclick = function() {
+            
+           var magicwordentered =document.getElementById("magicword").value;  
+            
+            var magicword = "koki";
+             
+            if (magicwordentered == magicword) {
+                
+              alert("u gotit");
+                
+          
+            } else {
+                
+               alert("nop try again"); 
+                
+            }
+            
+            
+            
+        }
+       
+        
+        
+    </script>
+   
+    </body>
+
+</html>
+=======================================
+<html>      (( randomnumber))
+    <head>
+        
+        <title>javascript</title>
+        
+        
+    </head>
+    
+    <body>
+        
+       <p>how many fingers i holding up</p> 
+        
+        <p> <input type="text" id="guess"> <button id="checkguess">guess</button></p>
+        
+        
+    <script type="text/javascript">
+      
+  document.getElementById("checkguess").onclick = function() {
+      
+      var randomnumber = Math.random();
+      
+      randomnumber = randomnumber * 6;
+      
+      randomnumber = Math.floor(randomnumber);
+      
+      if (document.getElementById("guess").value == randomnumber){
+          
+          
+        alert("well you gotit")  
+          
+      }else{
+          
+          
+          alert("nop teh number was " + randomnumber);
+      }
+      
+      
+  }
+           
+        
+        
+    </script>
+   
+    </body>
+
+</html>
+=============================
+<div class="jumbotron">
+  <h1>Hello, world!</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+---
+.jumbotron {
+              background-image: url(moon.png);
+          }
+==============================
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+Try it Yourself »
+how to make button
+==============================SQL
+<?php
+
+    session_start();
+
+    $error = "";    
+
+    if (array_key_exists("logout", $_GET)) {
+        
+        unset($_SESSION);
+        setcookie("id", "", time() - 60*60);
+        $_COOKIE["id"] = "";  
+        
+    } else if ((array_key_exists("id", $_SESSION) AND $_SESSION['id']) OR (array_key_exists("id", $_COOKIE) AND $_COOKIE['id'])) {
+        
+        header("Location: loggedinpage.php");
+        
+    }
+
+    if (array_key_exists("submit", $_POST)) {
+        
+        $link = mysqli_connect("localhost", "root", "", "secritbi");
+        
+        if (mysqli_connect_error()) {
+            
+            die ("Database Connection Error");
+            
+        }
+        
+        
+        
+        if (!$_POST['email']) {
+            
+            $error .= "An email address is required<br>";
+            
+        } 
+        
+        if (!$_POST['password']) {
+            
+            $error .= "A password is required<br>";
+            
+        } 
+        
+        if ($error != "") {
+            
+            $error = "<p>There were error(s) in your form:</p>".$error;
+            
+        } else {
+            
+            if ($_POST['signUp'] == '1') {
+            
+                $query = "SELECT id FROM `users` WHERE email = '".mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
+
+                $result = mysqli_query($link, $query);
+
+                if (mysqli_num_rows($result) > 0) {
+
+                    $error = "That email address is taken.";
+
+                } else {
+
+                    $query = "INSERT INTO `users` (`email`, `password`) VALUES ('".mysqli_real_escape_string($link, $_POST['email'])."', '".mysqli_real_escape_string($link, $_POST['password'])."')";
+
+                    if (!mysqli_query($link, $query)) {
+
+                        $error = "<p>Could not sign you up - please try again later.</p>";
+
+                    } else {
+
+                        $query = "UPDATE `users` SET password = '".md5(md5(mysqli_insert_id($link)).$_POST['password'])."' WHERE id = ".mysqli_insert_id($link)." LIMIT 1";
+
+                        mysqli_query($link, $query);
+                        
+                        echo "sign in successful";
+
+                        $_SESSION['id'] = mysqli_insert_id($link);
+
+                        if ($_POST['stayLoggedIn'] == '1') {
+
+                            setcookie("id", mysqli_insert_id($link), time() + 60*60*24*365);
+
+                        } 
+
+                        header("Location: loggedinpage.php");
+
+                    }
+
+                } 
+                
+            } else {
+                    
+                    $query = "SELECT * FROM `users` WHERE email = '".mysqli_real_escape_string($link, $_POST['email'])."'";
+                
+                    $result = mysqli_query($link, $query);
+                
+                    $row = mysqli_fetch_array($result);
+                
+                    if (isset($row)) {
+                        
+                        $hashedPassword = md5(md5($row['id']).$_POST['password']);
+                        
+                        if ($hashedPassword == $row['password']) {
+                            
+                            $_SESSION['id'] = $row['id'];
+                            
+                            if ($_POST['stayLoggedIn'] == '1') {
+
+                                setcookie("id", $row['id'], time() + 60*60*24*365);
+
+                            } 
+
+                            header("Location: loggedinpage.php");
+                        
+                    
+                    
+                
+                        } else {
+                            
+                            echo "That email/password combination could not be found.";
+                            
+                        }
+                        
+                    } else {
+                        
+                        $error = "That email/password combination could not be found.";
+                        
+                    }
+                    
+                }
+            
+        }
+        
+        
+    }
+
+
+?>
+
+<div id="error"><?php echo $error; ?></div>
+
+<form method="post">
+
+    <input type="email" name="email" placeholder="Your Email">
+    
+    <input type="password" name="password" placeholder="Password">
+    
+    <input type="checkbox" name="stayLoggedIn" value=1>
+    
+    <input type="hidden" name="signUp" value="1">
+        
+    <input type="submit" name="submit" value="Sign Up!">
+
+</form>
+
+<form method="post">
+
+    <input type="email" name="email" placeholder="Your Email">
+    
+    <input type="password" name="password" placeholder="Password">
+    
+    <input type="checkbox" name="stayLoggedIn" value=1>
+    
+    <input type="hidden" name="signUp" value="0">
+        
+    <input type="submit" name="submit" value="Log In!">
+
+</form>
+=======================
+tomake page stritch  <div class="container-fluid">
+--------------------------------
+AIzaSyD62Ndkl1TEVjjMsozpLtrUo9anYWq4gAw
+
+<?php
+
+$weather ="";
+$error ="";
+
+
+    if ($_GET['city']) {
+    
+    $urlcontents =
+    file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".$_GET['city'].",&appid=e147ce351a7ada615ca389a57e21c738");
+    
+        $weatherarray = json_decode($urlcontents, true);
+        
+        print_r($weatherarray);
+
+    
+    }
+
+
+
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>weather scarper</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+      <style type="text/css">
+      
+      
+       html { 
+     background: url(pic.jpeg) no-repeat center center fixed; 
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+      
+          body {
+              
+              background: none;
+              
+          }
+          
+          .container {
+              
+              text-align-last: center;
+              margin-top: 400px;
+              width: 500px;
+              
+          }
+          
+         
+      </style>
+  </head>
+  <body>
+      
+      <div class="container">
+      
+          <h1>what is the waether?</h1>
+          
+         
+          
+          <form>
+  
+    <fieldset class="form-group">
+   
+        <label class="enter a name of city"></label>
+        <input type="text" class="form-control" name="city" id="city"  placeholder="london,tokyo,eg">
+  </fieldset>
+ 
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      
+      </div>
+     
+      
+      <img src="pic.jpeg">
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+          
+      
+  </body>
+</html>map apis
+---------
+vZHHYM0GOrAnwGeYqOGRju2Sh4wsg32qpTPlISTwZSC9Gjtnmg key
+---------
+toti31088722 twitter
+---------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
